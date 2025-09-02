@@ -1,0 +1,113 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Django
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+staticfiles/
+media/
+
+# Environment variables
+.env
+.venv
+venv/
+ENV/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Project specific
+backups/
+logs/
+*.log
+error.log
+django.log
+svc.err.log
+svc.out.log
+
+# Database backups
+*.sqlite3.backup
+*.sql.gz
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+.pytest_cache/
+
+# Node.js (якщо використовується)
+node_modules/
+npm-debug.log*
+
+# SSL certificates
+*.pem
+*.key
+*.crt
+
+# Secrets
+secrets.json
+config_local.py
+
+# Windows
+desktop.ini
+$RECYCLE.BIN/
+
+# Production
+nginx.conf.backup
+supervisor.conf.backup
+
+# Backup directories
+backups/
+mnt/
+usb/
+
+# Virtual environments
+.venv/
+venv/
+virtualenv/
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Media files (можна розкоментувати якщо потрібно)
+# media/
+
+# Static files (можна розкоментувати якщо потрібно)
+# staticfiles/

@@ -1,0 +1,160 @@
+========================================
+       KAVACRM GIT QUICK START
+========================================
+
+This guide helps you set up Git for KavaCRM project.
+
+========================================
+STEP 1: SET UP GIT USER
+========================================
+
+Run: git_setup.bat
+
+This will:
+- Check if Git is installed
+- Ask for your name and email
+- Configure Git globally
+
+Example:
+Name: Ivan Petrov
+Email: ivan@example.com
+
+========================================
+STEP 2: INITIALIZE GIT REPOSITORY
+========================================
+
+Run: git_init_simple.bat
+
+This will:
+- Initialize Git repository
+- Check .gitignore file
+- Add all project files
+- Create first commit
+- Create develop branch
+
+========================================
+STEP 3: CREATE GITHUB REPOSITORY
+========================================
+
+1. Go to https://github.com/new
+2. Repository name: KavaCRM
+3. Description: CRM system with AI integration
+4. IMPORTANT: UNCHECK these options:
+   - [ ] Add a README file
+   - [ ] Add .gitignore
+   - [ ] Add license
+5. Click "Create repository"
+6. Copy the repository URL
+
+Example URL: https://github.com/username/KavaCRM.git
+
+========================================
+STEP 4: PUBLISH TO GITHUB
+========================================
+
+Run: github_publish_simple.bat
+
+This will:
+- Ask for your GitHub repository URL
+- Set up connection to GitHub
+- Push code to GitHub
+- Push both master and develop branches
+
+========================================
+STEP 5: CHECK STATUS
+========================================
+
+Run: git_status_simple.bat
+
+This shows:
+- Git user information
+- Current branch
+- File status
+- Recent commits
+- Remote repositories
+
+========================================
+USEFUL GIT COMMANDS
+========================================
+
+Basic commands:
+git status              - Check file status
+git add .              - Add all changes
+git commit -m "message" - Create commit
+git push               - Push to GitHub
+git pull               - Pull from GitHub
+
+Branch commands:
+git branch             - Show all branches
+git branch develop     - Create develop branch
+git checkout develop   - Switch to develop branch
+git checkout -b feature/new - Create new branch
+
+========================================
+PROBLEM SOLVING
+========================================
+
+If you see encoding errors:
+Run: chcp 65001
+
+If Git user not configured:
+Run: git_setup.bat
+
+If repository not initialized:
+Run: git_init_simple.bat
+
+If can't push to GitHub:
+- Check repository URL
+- Check if you have access rights
+- Try: git push --force-with-lease origin master
+
+========================================
+DAILY WORKFLOW
+========================================
+
+1. Make changes to files
+2. Check status: git status
+3. Add changes: git add .
+4. Create commit: git commit -m "Description"
+5. Push to GitHub: git push
+
+========================================
+IMPORTANT NOTES
+========================================
+
+DO NOT commit these files:
+- .env (environment variables)
+- *.log (log files)
+- db.sqlite3 (database)
+- backups/ (backup files)
+- *.pyc (compiled Python)
+- __pycache__/ (Python cache)
+
+ALWAYS commit these files:
+- Source code (*.py)
+- Templates (*.html)
+- Static files (CSS, JS)
+- Documentation (README.md)
+- Configuration files (without secrets)
+
+========================================
+FILES CREATED
+========================================
+
+git_setup.bat          - Git user setup
+git_init_simple.bat    - Repository initialization
+github_publish_simple.bat - Publish to GitHub
+git_status_simple.bat  - Check repository status
+GIT_QUICK_START.txt    - This guide
+
+========================================
+SUPPORT
+========================================
+
+If you have problems:
+1. Check git_status_simple.bat
+2. Read error messages carefully
+3. Check internet connection
+4. Verify repository access rights
+
+Happy coding with Git! 🚀
