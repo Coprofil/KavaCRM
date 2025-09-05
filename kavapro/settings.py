@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-a3t=e*3zvqyptx=26%fkp&ad$&)*t4@f!7=ziu-a@5*nsrz4(j
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '46.118.98.38', 'kava-crm.asuscomm.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '46.118.98.38', 'kava-crm.asuscomm.com', 'api.ipify.org', 'www.shadowserver.org', 'shadowserver.org']
 
 
 # Application definition
