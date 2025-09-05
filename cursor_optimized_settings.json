@@ -1,0 +1,140 @@
+{
+  // === ОСНОВНІ НАЛАШТУВАННЯ ДЛЯ СТАБІЛЬНОСТІ ===
+
+  // Вимкнути телеметрію та аналітику
+  "telemetry.enableTelemetry": false,
+  "telemetry.enableCrashReporter": false,
+  "workbench.enableExperiments": false,
+
+  // Оптимізація пам'яті
+  "workbench.editor.enablePreview": false,
+  "workbench.editor.enablePreviewFromQuickOpen": false,
+  "workbench.quickOpen.closeOnFocusLost": false,
+
+  // Вимкнути непотрібні функції
+  "workbench.tree.enableStickyScroll": false,
+  "workbench.editor.showTabs": "single",
+  "workbench.editor.limit.enabled": true,
+  "workbench.editor.limit.value": 5,
+  "workbench.editor.limit.perEditorGroup": true,
+
+  // === ТЕРМІНАЛ - КРИТИЧНО ВАЖЛИВО ===
+
+  // Використовувати тільки CMD замість PowerShell
+  "terminal.integrated.shell.windows": "C:\\Windows\\System32\\cmd.exe",
+  "terminal.integrated.shellArgs.windows": ["/K", "chcp 65001 >nul"],
+  "terminal.integrated.env.windows": {
+    "PYTHONUNBUFFERED": "1",
+    "PYTHONIOENCODING": "utf-8"
+  },
+
+  // Вимкнути персистентні сесії терміналу
+  "terminal.integrated.enablePersistentSessions": false,
+  "terminal.integrated.persistentSessionReviveProcess": "never",
+
+  // Обмежити кількість терміналів
+  "terminal.integrated.tabs.enabled": false,
+  "terminal.integrated.tabs.hideCondition": "never",
+
+  // Таймаути та обмеження
+  "terminal.integrated.confirmOnExit": false,
+  "terminal.integrated.confirmOnKill": false,
+  "terminal.integrated.scrollback": 500,
+  "terminal.integrated.detectLocale": "off",
+  "terminal.integrated.gpuAcceleration": "off",
+
+  // === ПРОЦЕСИ ТА ЗАВДАННЯ ===
+
+  // Вимкнути автоматичні завдання
+  "task.autoDetect": "off",
+  "task.problemMatchers.neverPrompt": true,
+  "task.saveBeforeRun": "never",
+
+  // === ПОШУК І ФАЙЛИ ===
+
+  // Оптимізація пошуку
+  "search.followSymlinks": false,
+  "search.useIgnoreFiles": true,
+  "search.useGlobalIgnoreFiles": true,
+  "search.quickOpen.includeHistory": false,
+
+  // Виключення файлів
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/node_modules": true,
+    "**/.pyc": true,
+    "**/__pycache__": true,
+    "**/*.log": true
+  },
+
+  // Виключення з пошуку
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/.git": true,
+    "**/.pyc": true,
+    "**/__pycache__": true,
+    "**/*.log": true
+  },
+
+  // === GIT ІНТЕГРАЦІЯ ===
+
+  // Мінімізувати Git операції
+  "git.autofetch": false,
+  "git.confirmSync": false,
+  "git.enableSmartCommit": false,
+  "git.postCommitCommand": "none",
+  "git.showInlineOpenFileAction": false,
+  "git.showProgress": false,
+
+  // === PYTHON РОЗРОБКА ===
+
+  "python.terminal.activateEnvironment": false,
+  "python.terminal.activateEnvInCurrentTerminal": false,
+
+  // === РОБОТА З ФАЙЛАМИ ===
+
+  "files.autoSave": "off",
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+
+  // === РЕДАКТОР ===
+
+  "editor.minimap.enabled": false,
+  "editor.renderWhitespace": "boundary",
+  "editor.wordWrap": "off",
+  "editor.smoothScrolling": false,
+  "editor.cursorBlinking": "solid",
+  "editor.quickSuggestions": {
+    "other": false,
+    "comments": false,
+    "strings": false
+  },
+
+  // === РОБОЧИЙ СТОЛ ===
+
+  "workbench.startupEditor": "none",
+  "workbench.enableExperiments": false,
+  "workbench.tree.renderIndentGuides": "none",
+  "workbench.tree.indent": 8,
+
+  // === ДОДАТКОВІ ОПТИМІЗАЦІЇ ===
+
+  // Вимкнути сповіщення
+  "workbench.notifications.enabled": true,
+  "workbench.tips.enabled": false,
+
+  // Мінімізувати використання пам'яті
+  "workbench.editor.enablePreview": false,
+  "workbench.quickOpen.enableExperimentalUI": false,
+
+  // === ЕКСПЕРИМЕНТАЛЬНІ НАЛАШТУВАННЯ ===
+
+  // Оптимізація для стабільності
+  "application.experimental.renderer": false,
+  "window.experimental.useSandbox": true
+}

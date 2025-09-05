@@ -127,7 +127,7 @@ STATICFILES_DIRS = [
 STATIC_ROOT = BASE_DIR / "staticfiles"
 
 # Публічний префікс під Apache /crm у dev-режимі
-FORCE_SCRIPT_NAME = '/crm'
+FORCE_SCRIPT_NAME = '/crm'  # Увімкнено для підтримки зовнішнього доступу
 
 # CSRF налаштування для reverse proxy
 CSRF_TRUSTED_ORIGINS = [
@@ -144,16 +144,36 @@ CSRF_TRUSTED_ORIGINS = [
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Налаштування для роботи під Apache проксі з префіксом /crm/
-FORCE_SCRIPT_NAME = '/crm'
+# FORCE_SCRIPT_NAME = '/crm'  # Вимкнено для підтримки кореневого шляху
+
+# Налаштування бекапу
+USB_BACKUP_ENABLED = False
+BACKUP_DIR = BASE_DIR / "backups"
+
+# Базовий URL сайту (важливо для генерації абсолютних URL)
+SITE_URL = 'http://localhost:8000'
 
 # Налаштування аутентифікації
 LOGIN_URL = '/login/'
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
 
+# Налаштування куків для HTTPS (тільки в продакшні)
+if not DEBUG:
+    SESSION_COOKIE_SECURE = True
+    CSRF_COOKIE_SECURE = True
+    SESSION_COOKIE_SAMESITE = 'Lax'
+    CSRF_COOKIE_SAMESITE = 'Lax'
+else:
+    # Для розробки дозволяємо HTTP
+    SESSION_COOKIE_SECURE = False
+    CSRF_COOKIE_SECURE = False
+    SESSION_COOKIE_SAMESITE = 'Lax'
+    CSRF_COOKIE_SAMESITE = 'Lax'
+
 LOGGING = {
     'version': 1,
-    'disable_existing_loggers': False,
+    'disable_existing_loggers': True,  # Змінено з False на True щоб зменшити логи
     'formatters': {
         'simple': {
             'format': '{levelname} {message}',
@@ -162,19 +182,25 @@ LOGGING = {
     },
     'handlers': {
         'console': {
-            'level': 'WARNING',
+            'level': 'ERROR',  # Змінено з WARNING на ERROR щоб показувати тільки помилки
             'class': 'logging.StreamHandler',
             'formatter': 'simple',
         },
     },
     'root': {
         'handlers': ['console'],
-        'level': 'WARNING',
+        'level': 'ERROR',  # Змінено з WARNING на ERROR
     },
     'loggers': {
         'django': {
             'handlers': ['console'],
-            'level': 'WARNING',
+            'level': 'ERROR',  # Змінено з WARNING на ERROR
+            'propagate': False,
+        },
+        # Додаємо логер для бекапів з вищим рівнем
+        'backup_utils_windows': {
+            'handlers': ['console'],
+            'level': 'WARNING',  # Попередження бекапу будуть показуватися
             'propagate': False,
         },
     },
@@ -206,4 +232,3 @@ TWO_FACTOR_REMOVE_URL = 'two_factor:disable'
 
 # Налаштування адмінки
 ADMIN_URL = 'secure-admin/'  # Змінений шлях адмінки для безпеки
-

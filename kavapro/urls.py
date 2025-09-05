@@ -36,7 +36,8 @@ except Exception:
 # Безпечний шлях адмінки (змініть на унікальний)
 urlpatterns += [
     path('secure-admin-panel-2024/', admin.site.urls),
-    path('', include('kavacrm.urls')),
+    path('', include('kavacrm.urls')),        # Повернуто для сумісності
+    path('crm/', include('kavacrm.urls')),  # Основний префікс для додатку
 ]
 
 # Додаткові URL для продакшн

@@ -1,0 +1,14 @@
+{
+  "terminal.integrated.shell.windows": "C:\\Windows\\System32\\cmd.exe",
+  "terminal.integrated.env.windows": {
+    "PYTHONUNBUFFERED": "1",
+    "PYTHONIOENCODING": "utf-8"
+  },
+  "terminal.integrated.shellArgs.windows": ["/K", "chcp 65001"],
+  "terminal.integrated.scrollback": 1000,
+  "terminal.integrated.detectLocale": "off",
+  "terminal.integrated.enablePersistentSessions": false,
+  "terminal.integrated.confirmOnExit": false,
+  "terminal.integrated.confirmOnKill": false,
+  "terminal.integrated.persistentSessionReviveProcess": "never"
+}

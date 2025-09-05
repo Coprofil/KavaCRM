@@ -1,0 +1,75 @@
+{
+  // === ДОДАТКОВІ ОПТИМІЗАЦІЇ ПРОДУКТИВНОСТІ ===
+
+  // Мінімізувати використання CPU
+  "workbench.smoothScrolling": false,
+  "editor.smoothScrolling": false,
+  "terminal.integrated.smoothScrolling": false,
+
+  // Вимкнути анімації
+  "workbench.list.horizontalScrolling": false,
+  "workbench.tree.horizontalScrolling": false,
+  "editor.cursorSmoothCaretAnimation": "off",
+  "editor.suggest.showStatusBar": false,
+
+  // Оптимізація пам'яті для великих файлів
+  "editor.largeFileOptimizations": true,
+  "files.maxMemoryForLargeFilesMB": 1024,
+
+  // Мінімізувати кількість відкритих файлів
+  "workbench.editor.limit.enabled": true,
+  "workbench.editor.limit.value": 3,
+  "workbench.editor.limit.perEditorGroup": true,
+
+  // Вимкнути непотрібні іконки та елементи
+  "workbench.activityBar.visible": true,
+  "workbench.statusBar.visible": true,
+  "workbench.editor.showTabs": "single",
+  "workbench.tree.renderIndentGuides": "none",
+
+  // === ОПТИМІЗАЦІЯ ДЛЯ PYTHON ПРОЕКТІВ ===
+
+  "python.analysis.memory.keepLibraryAst": false,
+  "python.analysis.memory.keepLibraryLocalVariables": false,
+  "python.analysis.diagnosticMode": "minimal",
+
+  // === МЕРЕЖЕВІ НАЛАШТУВАННЯ ===
+
+  // Мінімізувати мережеві запити
+  "workbench.settings.enableNaturalLanguageSearch": false,
+  "workbench.quickOpen.enableExperimentalUI": false,
+  "extensions.autoCheckUpdates": false,
+  "extensions.autoUpdate": false,
+
+  // === ДОДАТКОВІ ОПТИМІЗАЦІЇ ===
+
+  // Вимкнути журнали діагностики
+  "typescript.tsserver.log": "off",
+  "typescript.tsserver.trace": "off",
+
+  // Мінімізувати кількість процесів
+  "terminal.integrated.tabs.enabled": false,
+  "terminal.integrated.splitCwd": "workspaceRoot",
+
+  // === НАЛАШТУВАННЯ ДЛЯ СТАБІЛЬНОСТІ ===
+
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/**": true,
+    "**/__pycache__/**": true,
+    "**/*.pyc": true,
+    "**/.pytest_cache/**": true,
+    "**/.mypy_cache/**": true
+  },
+
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/.git": true,
+    "**/.pyc": true,
+    "**/__pycache__": true,
+    "**/*.log": true,
+    "**/.pytest_cache": true,
+    "**/.mypy_cache": true
+  }
+}
